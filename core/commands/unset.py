@@ -55,7 +55,7 @@ def execute(shell, cmd):
                 shell.print_error("Option is not found!")
                 return
 
-            shell.print_good("%s ==> %s" % (key, value))
+            shell.print_info("%s ==> %s" % (key, value))
         else:
             shell.print_error("Unrecognized option!")
             
