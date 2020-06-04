@@ -61,12 +61,12 @@ class ComsvcsLSASSJob(core.job.Job):
 
         if task == 'pid':
             handler.reply(200)
-            self.print_status("Detected lsass.exe process ID: "+data.decode()+"...")
+            self.print_info("Detected lsass.exe process ID: "+data.decode()+"...")
             return
 
         if task == 'nopid':
             handler.reply(200)
-            self.print_status("Could not identify lsass.exe process ID. Please provide manually...")
+            self.print_warning("Could not identify lsass.exe process ID. Please provide manually...")
             return
 
         if task == 'startrun':
@@ -76,7 +76,7 @@ class ComsvcsLSASSJob(core.job.Job):
 
         if task == 'endrun':
             handler.reply(200)
-            self.print_status("Finished creating MiniDump...")
+            self.print_status("Finishing creating MiniDump...")
             return
 
         if task == 'upload':
@@ -131,7 +131,7 @@ class ComsvcsLSASSJob(core.job.Job):
                 with open(self.save_fname, "wb") as f:
                     f.write(data)
 
-            self.print_status("Download complete, parsing with pypykatz...")
+            self.print_status("Parsing with pypykatz...")
 
             from pypykatz.pypykatz import pypykatz
             from pypykatz.commons.common import UniversalEncoder

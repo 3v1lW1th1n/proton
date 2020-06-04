@@ -54,7 +54,7 @@ class ThunderstruckImplant(core.implant.Implant):
         response = urllib.request.urlopen(self.options.get("VIDEOURL")).read().decode()
         ms = response.split('approxDurationMs\\":\\"')[1].split("\\")[0]
         seconds = int(ms)//1000
-        self.shell.print_status(f"Video length: {seconds} seconds.")
+        self.shell.print_info(f"Video length: {seconds} seconds.")
 
         self.options.set("SECONDS", str(seconds+1))
 

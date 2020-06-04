@@ -121,7 +121,7 @@ class HashDumpSAMJob(core.job.Job):
             data = self.decode_downloaded_data(data, "936")
             with open(self.sam_file, "wb") as f:
                 f.write(data)
-        self.print_status("Decoded SAM hive (%s)" % self.sam_file)
+        self.print_info("Decoded SAM hive (%s)" % self.sam_file)
 
         self.security_file = self.save_file(self.security_data, "SECURITY", self.security_encoder)
         if self.options.get("CERTUTIL") == "true":
@@ -176,7 +176,7 @@ class HashDumpSAMJob(core.job.Job):
                 self.error("0", "There was a problem decoding the syskey. Try setting GETSYSHIVE to true and running again.", "Decode error.", "")
                 return False
 
-            self.print_status("Decoded SysKey: 0x%s" % self.syskey)
+            self.print_info("Decoded SysKey: 0x%s" % self.syskey)
             cmd = ['python2', path, '-sam', self.sam_file, '-bootkey', self.syskey, '-security', self.security_file, 'LOCAL']
 
         p = Popen(cmd, stdin=PIPE, stdout=PIPE, stderr=STDOUT, close_fds=True, env={"PYTHONPATH": "./data/impacket"})
