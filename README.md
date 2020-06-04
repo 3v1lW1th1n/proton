@@ -23,7 +23,7 @@
  </a>
 </p>
 
-![proton](https://user-images.githubusercontent.com/54115104/79493962-e2300100-802a-11ea-98c6-a7be5d6dc792.png)
+![proton](https://user-images.githubusercontent.com/54115104/83800092-8c351c80-a6af-11ea-98da-5084cc542828.png)
 
 ***
 
@@ -94,7 +94,7 @@ There are a lot of different implants in Proton
 Framework such as exec_cmd and upload_file implants.
 ```
 
-![implants](https://user-images.githubusercontent.com/54115104/79493964-e2c89780-802a-11ea-9a8a-d93d4537bd77.png)
+![implants](https://user-images.githubusercontent.com/54115104/83800101-90f9d080-a6af-11ea-9b35-254e0a57a8b1.png)
 
 ***
     
