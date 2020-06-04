@@ -86,7 +86,7 @@ def run_cmdshell(shell, session):
     curdrive = startdrive
     drivepathmap = {}
 
-    shell.print_status("Use \"?\" for extra commands.")
+    shell.print_info("Use \"?\" for extra commands.")
 
     while True:
         shell.state = exec_cmd_name
