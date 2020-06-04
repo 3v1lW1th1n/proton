@@ -249,6 +249,9 @@ class Shell(object):
     def print_command(self, text, redraw = False):
         self.print_text(self.colors.other("[#]"), text, redraw)
 
+    def print_info(self, text, redraw = False):
+        self.print_text(self.colors.other("[i]"), text, redraw)
+        
     def play_sound(self, enum):
         if enum in self.sounds:
             sound = self.sounds[enum]
