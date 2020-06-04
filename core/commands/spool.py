@@ -70,7 +70,7 @@ def execute(shell, cmd):
         if option == 'on':
             shell.spool = '/tmp/proton.spool'
             shell.spoolstatus = True
-            shell.print_status("Spooling: %s" % ("on" if shell.spoolstatus else "off"))
+            shell.print_info("Spooling: %s" % ("on" if shell.spoolstatus else "off"))
             shell.print_status("Spooling to /tmp/proton.spool...")
         elif option == 'off':
             if shell.spool:
@@ -79,7 +79,7 @@ def execute(shell, cmd):
         else:
             shell.spool = option
             shell.spoolstatus = True
-            shell.print_status("Spooling: %s" % ("on" if shell.spoolstatus else "off"))
+            shell.print_info("Spooling: %s" % ("on" if shell.spoolstatus else "off"))
             shell.print_status("Spooling to "+option+"...")
     else:
         help(shell)
