@@ -117,7 +117,7 @@ class StagerWizard(core.plugin.Plugin):
         new_stager = Stager(self.shell, copy.deepcopy(self.options))
         self.shell.stagers[srvport][endpoint] = new_stager
         self.shell.play_sound('STAGER')
-        self.shell.print_good(f"Spawned a stager at {new_stager.options.get('URL')}")
+        self.shell.print_good(f"Spawned a stager at {new_stager.options.get('URL')}!")
         self.shell.print_command(new_stager.get_payload_data().decode())
 
     def start_server(self, port, keypath, certpath):
