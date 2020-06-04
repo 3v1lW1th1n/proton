@@ -44,9 +44,9 @@ def execute(shell, cmd):
             from core.sounds import sounds
             shell.sounds = sounds
             shell.play_sound('ON')
-            shell.print_status("Sounds: %s" % ("on" if shell.sounds else "off"))
+            shell.print_info("Sounds: %s" % ("on" if shell.sounds else "off"))
         if sw == "0" or sw == "false" or sw == "off":
             shell.sounds = {}
-            shell.print_status("Sounds: %s" % ("on" if shell.sounds else "off"))
+            shell.print_info("Sounds: %s" % ("on" if shell.sounds else "off"))
     else:
         help(shell)
