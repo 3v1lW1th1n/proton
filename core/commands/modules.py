@@ -25,8 +25,8 @@ def autocomplete(shell, line, text, state):
 
 def help(shell):
     shell.print_plain("")
-    shell.print_plain('Use "modules -s" to show all available stagers.')
-    shell.print_plain('Use "modules -i" to show all available implants.')
+    shell.print_info('Use "modules -s" to show all available stagers.')
+    shell.print_info('Use "modules -i" to show all available implants.')
     shell.print_plain("")
 
 def execute(shell, cmd):

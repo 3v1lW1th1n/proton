@@ -27,7 +27,7 @@ def autocomplete(shell, line, text, state):
 
 def help(shell):
     shell.print_plain("")
-    shell.print_plain('Use "pyexec %s" to eval the specified python code.' % (shell.colors.colorize("CODE", shell.colors.BOLD)))
+    shell.print_info('Use "pyexec %s" to eval the specified python code.' % (shell.colors.colorize("CODE", shell.colors.BOLD)))
     shell.print_plain("")
 
 def execute(shell, cmd):

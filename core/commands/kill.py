@@ -25,9 +25,9 @@ def autocomplete(shell, line, text, state):
 
 def help(shell):
     shell.print_plain("")
-    shell.print_plain('Use "kill %s" to kill the specified zombie.' % (shell.colors.colorize("ZOMBIE_ID", shell.colors.BOLD)))
-    shell.print_plain('Use "kill all" to kill all active zombies.')
-    shell.print_plain('Use "kill dead" to kill all dead zombies.')
+    shell.print_info('Use "kill %s" to kill the specified zombie.' % (shell.colors.colorize("ZOMBIE_ID", shell.colors.BOLD)))
+    shell.print_info('Use "kill all" to kill all active zombies.')
+    shell.print_info('Use "kill dead" to kill all dead zombies.')
     shell.print_plain("")
 
 def kill_zombie(shell, id):

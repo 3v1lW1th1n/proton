@@ -79,7 +79,7 @@ def filepaths(text):
 
 def help(shell):
     shell.print_plain("")
-    shell.print_plain('Use "set %s" to set the value for the specified option.' % (shell.colors.colorize("OPTION VALUE", shell.colors.BOLD)))
+    shell.print_info('Use "set %s" to set the value for the specified option.' % (shell.colors.colorize("OPTION VALUE", shell.colors.BOLD)))
     shell.print_plain("")
 
 def execute(shell, cmd):

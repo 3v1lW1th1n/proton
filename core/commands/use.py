@@ -54,7 +54,7 @@ def autocomplete(shell, line, text, state):
 
 def help(shell):
     shell.print_plain("")
-    shell.print_plain('Use "use %s" to switch to the specified module.' % (shell.colors.colorize("MODULE", shell.colors.BOLD)))
+    shell.print_info('Use "use %s" to switch to the specified module.' % (shell.colors.colorize("MODULE", shell.colors.BOLD)))
     shell.print_plain("")
 
 def modules(shell, module):

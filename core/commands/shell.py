@@ -37,7 +37,7 @@ def autocomplete(shell, line, text, state):
 
 def help(shell):
     shell.print_plain("")
-    shell.print_plain('Use "shell %s" to interact with a particular zombie.' % (shell.colors.colorize("ZOMBIE_ID", shell.colors.BOLD)))
+    shell.print_info('Use "shell %s" to interact with a particular zombie.' % (shell.colors.colorize("ZOMBIE_ID", shell.colors.BOLD)))
     shell.print_plain("")
 
 def get_prompt(shell, id, ip, cwd, isreadline = True):
@@ -48,11 +48,11 @@ def get_prompt(shell, id, ip, cwd, isreadline = True):
 
 def cmdshell_help(shell):
     shell.print_plain("")
-    shell.print_plain('Use "cd %s" to change current working directory.' % (shell.colors.colorize("PATH", shell.colors.BOLD)))
-    shell.print_plain('Use "upload %s" to upload a local file to the zombie.' % (shell.colors.colorize("LFILE", shell.colors.BOLD)))
-    shell.print_plain('Use "download %s" to download a file from the zombie.' % (shell.colors.colorize("FILE", shell.colors.BOLD)))
-    shell.print_plain('Use "help" to show full list of all available commands.')
-    shell.print_plain('Use "exit" to leave this shell and return to Proton.')    
+    shell.print_info('Use "cd %s" to change current working directory.' % (shell.colors.colorize("PATH", shell.colors.BOLD)))
+    shell.print_info('Use "upload %s" to upload a local file to the zombie.' % (shell.colors.colorize("LFILE", shell.colors.BOLD)))
+    shell.print_info('Use "download %s" to download a file from the zombie.' % (shell.colors.colorize("FILE", shell.colors.BOLD)))
+    shell.print_info('Use "help" to show full list of all available commands.')
+    shell.print_info('Use "exit" to leave this shell and return to Proton.')
     shell.print_plain("")
 
 def run_cmdshell(shell, session):

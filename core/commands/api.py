@@ -31,8 +31,8 @@ def autocomplete(shell, line, text, state):
 
 def help(shell):
     shell.print_plain("")
-    shell.print_plain('Use "api on --user %s" to turn the rest API on.' % (ARGS))
-    shell.print_plain('Use "api off" to turn the rest API off.')
+    shell.print_info('Use "api on --user %s" to turn the rest API on.' % (ARGS))
+    shell.print_info('Use "api off" to turn the rest API off.')
     shell.print_plain("")
 
 def execute(shell, cmd):
@@ -93,9 +93,9 @@ def execute(shell, cmd):
                 # so here we are.
                 if "started" in shell.rest_thread.localtrace(0,0,0).__str__():
                     shell.print_good("Rest server running on port %s" % port)
-                    shell.print_status("Username: %s" % username)
-                    shell.print_status("Password: %s" % password)
-                    shell.print_status("API Token: %s" % rest_server.token)
+                    shell.print_info("Username: %s" % username)
+                    shell.print_info("Password: %s" % password)
+                    shell.print_info("API Token: %s" % rest_server.token)
                 else:
                     shell.rest_thread.kill()
                     shell.rest_thread = ""

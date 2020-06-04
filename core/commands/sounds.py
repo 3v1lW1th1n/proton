@@ -25,8 +25,8 @@ def autocomplete(shell, line, text, state):
 
 def help(shell):
     shell.print_plain("")
-    shell.print_plain('Use "sounds on" to turn sounds on.')
-    shell.print_plain('Use "sounds off" to turn sounds off.')
+    shell.print_info('Use "sounds on" to turn sounds on.')
+    shell.print_info('Use "sounds off" to turn sounds off.')
     shell.print_plain("")
 
 def execute(shell, cmd):

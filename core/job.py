@@ -203,7 +203,7 @@ class Job(object):
         pass
 
     def print_status(self, message):
-        self.shell.print_status("Zombie %d: Job %d (%s) %s." % (
+        self.shell.print_info("Zombie %d: Job %d (%s) %s." % (
             self.session_id, self.id, self.name, message))
 
     def print_good(self, message):

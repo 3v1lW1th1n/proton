@@ -25,7 +25,7 @@ def autocomplete(shell, line, text, state):
 
 def help(shell):
     shell.print_plain("")
-    shell.print_plain('Use "options -a" for advanced options.')
+    shell.print_info('Use "options -a" for advanced options.')
     shell.print_plain("")
 
 def execute(shell, cmd):

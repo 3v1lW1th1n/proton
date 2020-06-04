@@ -30,14 +30,14 @@ def autocomplete(shell, line, text, state):
 
 def help(shell):
     shell.print_plain("")
-    shell.print_plain('Use "creds --sort %s" to sort on a column name.' % (shell.colors.colorize("COLUMN", shell.colors.BOLD)))
-    shell.print_plain('Use "creds --search %s" to lazy search across credentials.' % (shell.colors.colorize("TEXT", shell.colors.BOLD)))
-    shell.print_plain('Use "creds -a" for full credential details.')
-    shell.print_plain('Use "creds -u %s" for specific user credentials (add --like for partial names).' % (shell.colors.colorize("USER", shell.colors.BOLD)))
-    shell.print_plain('Use "creds -d %s" for domain admin credentials.' % (shell.colors.colorize("DOMAIN", shell.colors.BOLD)))
-    shell.print_plain('Use "creds -D %s" for domain credentials.' % (shell.colors.colorize("DOMAIN", shell.colors.BOLD)))
-    shell.print_plain('Use "creds -x" to write credentials to a file.')
-    shell.print_plain('Use "creds --edit" to edit credentials.')
+    shell.print_info('Use "creds --sort %s" to sort on a column name.' % (shell.colors.colorize("COLUMN", shell.colors.BOLD)))
+    shell.print_info('Use "creds --search %s" to lazy search across credentials.' % (shell.colors.colorize("TEXT", shell.colors.BOLD)))
+    shell.print_info('Use "creds -a" for full credential details.')
+    shell.print_info('Use "creds -u %s" for specific user credentials (add --like for partial names).' % (shell.colors.colorize("USER", shell.colors.BOLD)))
+    shell.print_info('Use "creds -d %s" for domain admin credentials.' % (shell.colors.colorize("DOMAIN", shell.colors.BOLD)))
+    shell.print_info('Use "creds -D %s" for domain credentials.' % (shell.colors.colorize("DOMAIN", shell.colors.BOLD)))
+    shell.print_info('Use "creds -x" to write credentials to a file.')
+    shell.print_info('Use "creds --edit" to edit credentials.')
     shell.print_plain("")
 
 def print_creds(shell, sortcol="Normal", domain="", search=""):
